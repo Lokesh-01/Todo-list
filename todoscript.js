@@ -32,7 +32,10 @@ function show(){
     var todos=get_todos();
     var html='<ul>';
     for(var i=0;i<todos.length;i++){
-        html +='<li>'+todos[i]+'<button class="remove"id="'+i +'">Delete</button></li>';
+        const listitem=document.createElement('li');
+        listitem.innerHTML=`${todos[i]}'<button class="remove"id="'${i} '">Delete</button>`;
+        document.append(listitem);
+        
 
     }
     html =+'</ul>';
